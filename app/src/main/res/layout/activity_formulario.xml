@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".FormularioActivity">
+
+    <TextView
+        style="@style/tituloPrincipal"
+        android:layout_height="wrap_content"
+        android:text="@string/label_titulo" />
+
+
+    <TextView
+        style="@style/label"
+        android:text="Seu peso" />
+
+    <EditText
+        style="@style/input"
+        android:hint="Exemplo: 1,7" />
+
+    <TextView
+        style="@style/label"
+        android:text="Sua altura" />
+
+    <EditText
+        style="@style/input"
+        android:hint="Exemplo: 1,7" />
+
+    <Button
+        style="@style/botao"
+        android:text="Calcular"/>
+
+    <Button
+        style="@style/botao"
+        android:text="Limpar"/>
+
+</LinearLayout>
