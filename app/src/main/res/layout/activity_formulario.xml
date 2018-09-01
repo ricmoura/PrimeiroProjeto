@@ -11,7 +11,7 @@
     <TextView
         style="@style/tituloPrincipal"
         android:layout_height="wrap_content"
-        android:text="@string/label_titulo" />
+        android:text="@string/calculadora_toperson" />
 
 
     <TextView
@@ -19,6 +19,7 @@
         android:text="Seu peso" />
 
     <EditText
+        android:id="@+id/inputPeso"
         style="@style/input"
         android:hint="Exemplo: 1,7" />
 
@@ -27,15 +28,18 @@
         android:text="Sua altura" />
 
     <EditText
+        android:id="@+id/inputAltura"
         style="@style/input"
         android:hint="Exemplo: 1,7" />
 
     <Button
+        android:id="@+id/btCalcular"
         style="@style/botao"
-        android:text="Calcular"/>
+        android:text="Calcular" />
 
     <Button
+        android:id="@+id/btLimpar"
         style="@style/botao"
-        android:text="Limpar"/>
+        android:text="Limpar" />
 
 </LinearLayout>
