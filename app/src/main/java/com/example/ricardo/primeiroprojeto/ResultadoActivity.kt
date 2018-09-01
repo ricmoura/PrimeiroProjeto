@@ -14,6 +14,7 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val peso = intent.extras.getString(ConstantesExtra.KEY_PESO)
         val altura = intent.extras.getString(ConstantesExtra.KEY_ALTURA)
@@ -22,29 +23,30 @@ class ResultadoActivity : AppCompatActivity() {
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
+    }
+
     private fun calcularIMC(peso: Double, altura: Double) {
         val imc = peso / (altura*altura)
+        tvIMC.text = imc.format(0)
 
         if (imc < 17) {
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.magreza)
+
         }else if(imc < 18.5){
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.abaixo)
         }else if(imc <24.9){
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.ideal)
+            tvDescricao.text = getString(R.string.label_peso_ideal)
         }else if(imc < 29.9){
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.sobre)
         }else if(imc < 34.9){
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.obesidade)
         }else if(imc < 39.9){
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.obesidade)
         }else {
-            tvIMC.text = imc.format(0)
             setImgaem(R.drawable.obesidade)
         }
 

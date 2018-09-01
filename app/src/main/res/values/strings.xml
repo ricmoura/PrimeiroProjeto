@@ -11,4 +11,7 @@
     <string name="label_titulo_resultado">You IMC is</string>
     <string name="label_rodape">Developed by EU</string>
     <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="label_peso_ideal">Peso Ideal</string>
+
+
 </resources>
